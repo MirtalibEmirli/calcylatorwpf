@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="330">
+      Height="500" Width="330" ResizeMode="NoResize" Title="Calculator" Background="AliceBlue" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -17,6 +17,12 @@
         <!--
         en ust-->
         <Grid Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFDFF32" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="165*"/>
@@ -24,12 +30,12 @@
                 <ColumnDefinition Width="29*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Horizontal">
-                <Image  Source="images/hmbicon.jpg" Height="13" Width="26" RenderTransformOrigin="0.532,0.505"/>
+                <Image  Source="images/hmbicon.jpg" Height="22" Width="29" RenderTransformOrigin="0.532,0.505"/>
                 <Label  Content="Simple" Background="LightSlateGray" Width="51" Margin="85 5 6 3 " VerticalAlignment="Center" HorizontalAlignment="Right" Height="24" RenderTransformOrigin="0.763,0.71">
 
                 </Label>
             </StackPanel>
-            <Label HorizontalAlignment="Left" Grid.ColumnSpan="3" Margin="115,0,0,0">
+            <Label HorizontalAlignment="Left" Grid.ColumnSpan="3" Margin="115,0,0,0" FontStretch="Expanded" Background="#00000000">
                 <Image    Source="file:///C:/Users/mirta/OneDrive/Pictures/444.webp" Margin="159,0,-21,0" RenderTransformOrigin="0.658,0.687" Height="40" Width="57"/>
 
             </Label>
@@ -37,7 +43,152 @@
 
         </Grid>
         <Grid Grid.Row="1" >
-            <Label Content="0" FontStyle="Italic"  FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Label Name="label1"  Content="0" FontStyle="Italic"  FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button Content="MC" VerticalAlignment="Center" HorizontalAlignment="Center" Height="19" Width="25" Margin=" 5 4 295 4" />
+            <Button Content="MR" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="19" Width="25" Margin=" 5 4 195 4" />
+            <Button Content="M+" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="19" Width="25" Margin=" 5 4 105 4" />
+            <Button Content="M-" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="19" Width="25" Margin=" 5 4 15 4" />
+            <Button Content="Ms" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="19" Width="25" Margin=" 5 4 -90 4" />
+            <Button Content="M^" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="19" Width="25" Margin=" 5 4 -200 4" />
+            <Button Content="M6" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="19" Width="25" Margin=" 5 4 -290 4" />
+        </Grid>
+
+
+        <!--
+        son hisse-->
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Button Content="%" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Button Content="CE" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="0">
+                <Button Content="C" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="0">
+                <Button Content="x" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Button Content="1/x" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+
+
+
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Button Content="x2" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="1">
+                <Button Content="V2x" Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Button x:Name="bol" Content="/" Background="Cyan" FontStyle="Oblique" Click="bol_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Button Name="yeddi" Content="7" Background="Cyan" FontStyle="Oblique" Click="yeddi_Click_1"/>
+            </Grid>
+
+
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Button Name="sekkiz" Content="8" Background="Cyan" FontStyle="Oblique" Click="sekkiz_Click_1"/>
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="2">
+                <Button Name="doqquz" Content="9" Background="Cyan" FontStyle="Oblique" Click="doqquz_Click_1"/>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="2">
+                <Button Name="Vur"  Content="*" Background="Cyan" FontStyle="Oblique" Click="Vur_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="3">
+                <Button Name="dord" Content="4" Background="Cyan" FontStyle="Oblique" Click="dord_Click_1"/>
+            </Grid>
+
+
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Button Name="bes"  Content="5" Background="Cyan" FontStyle="Oblique" Click="bes_Click_1"/>
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="3">
+                <Button Name="alti" Content="6" Background="Cyan" FontStyle="Oblique" Click="alti_Click_1"/>
+            </Grid>
+
+            <Grid Grid.Column="3" Grid.Row="3">
+                <Button Name="Cix" Content="-" Background="Cyan" FontStyle="Oblique" Click="Cix_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="4">
+                <Button Name="bir"  Content="1" Background="Cyan" FontStyle="Oblique" Click="bir_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="4">
+                <Button Name="iki" Content="2" Background="Cyan" FontStyle="Oblique" Click="iki_Click_1"/>
+            </Grid>
+           
+
+            <Grid Grid.Column="2" Grid.Row="4">
+                <Button Name="uc" Content="3" Background="Cyan" FontStyle="Oblique" Click="uc_Click_1"/>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="4">
+                <Button Name="Topla" Content="+" Background="Cyan" FontStyle="Oblique" Click="Topla_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="5">
+                <Button Content="-/+" Background="Cyan" FontStyle="Oblique" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="5">
+                <Button Name="sifir" Content="0" Background="Cyan" FontStyle="Oblique" Click="sifir_Click_1" />
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="5">
+                <Button Content="." Background="Cyan" FontStyle="Oblique"/>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="5">
+                <Button Name="beraber" Content="=" Background="Cyan" FontStyle="Oblique" Click="beraber_Click" />
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </Grid>
     </Grid>
