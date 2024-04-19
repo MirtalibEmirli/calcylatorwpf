@@ -30,11 +30,11 @@
                 <ColumnDefinition Width="29*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Horizontal">
-                <Image  Source="images/hmbicon.jpg" Height="22" Width="29" RenderTransformOrigin="0.532,0.505"/>
-                <Label  Content="Simple" Background="LightSlateGray" Width="51" Margin="85 5 6 3 " VerticalAlignment="Center" HorizontalAlignment="Right" Height="24" RenderTransformOrigin="0.763,0.71">
-
-                </Label>
+               
+                <Image Source="images/hmbicon.jpg" Height="22" Width="29" />
+                <Label Content="Simple" Background="LightSlateGray" Width="51" VerticalAlignment="Center" />
             </StackPanel>
+
             <Label HorizontalAlignment="Left" Grid.ColumnSpan="3" Margin="115,0,0,0" FontStretch="Expanded" Background="#00000000">
                 <Image    Source="file:///C:/Users/mirta/OneDrive/Pictures/444.webp" Margin="159,0,-21,0" RenderTransformOrigin="0.658,0.687" Height="40" Width="57"/>
 
@@ -80,28 +80,28 @@
             </Grid>
 
             <Grid Grid.Column="1" Grid.Row="0">
-                <Button Content="CE" Background="Cyan" FontStyle="Oblique"/>
+                <Button Content="CE" Background="Cyan" FontStyle="Oblique" Click="Button_Click_1"/>
             </Grid>
 
             <Grid Grid.Column="2" Grid.Row="0">
-                <Button Content="C" Background="Cyan" FontStyle="Oblique"/>
+                <Button Content="C" Background="Cyan" FontStyle="Oblique" Click="Button_Click"/>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="0">
                 <Button Content="x" Background="Cyan" FontStyle="Oblique"/>
             </Grid>
 
             <Grid Grid.Column="0" Grid.Row="1">
-                <Button Content="1/x" Background="Cyan" FontStyle="Oblique"/>
+                <Button Content="1/x" Background="Cyan" FontStyle="Oblique" Click="Button_Click_5"/>
             </Grid>
 
 
 
 
             <Grid Grid.Column="1" Grid.Row="1">
-                <Button Content="x2" Background="Cyan" FontStyle="Oblique"/>
+                <Button Content="x2" Background="Cyan" FontStyle="Oblique" Click="Button_Click_4"/>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button Content="V2x" Background="Cyan" FontStyle="Oblique"/>
+                <Button Content="V2x" Background="Cyan" FontStyle="Oblique" Click="Button_Click_3"/>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="1">
                 <Button x:Name="bol" Content="/" Background="Cyan" FontStyle="Oblique" Click="bol_Click"/>
@@ -155,13 +155,13 @@
             </Grid>
 
             <Grid Grid.Column="0" Grid.Row="5">
-                <Button Content="-/+" Background="Cyan" FontStyle="Oblique" />
+                <Button Content="-/+" Background="Cyan" FontStyle="Oblique" Click="Button_Click_2" />
             </Grid>
             <Grid Grid.Column="1" Grid.Row="5">
                 <Button Name="sifir" Content="0" Background="Cyan" FontStyle="Oblique" Click="sifir_Click_1" />
             </Grid>
             <Grid Grid.Column="2" Grid.Row="5">
-                <Button Content="." Background="Cyan" FontStyle="Oblique"/>
+                <Button Content="." Background="Cyan" FontStyle="Oblique" Click="Button_Click_6"/>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="5">
                 <Button Name="beraber" Content="=" Background="Cyan" FontStyle="Oblique" Click="beraber_Click" />

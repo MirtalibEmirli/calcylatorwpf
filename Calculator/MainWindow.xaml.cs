@@ -238,4 +238,52 @@ public partial class MainWindow : Window
 
         label1.Content += "1";
     }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+        label1.Content = "0";
+    }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+        label1.Content = "0";
+
+    }
+
+    private void Button_Click_2(object sender, RoutedEventArgs e)
+    {
+        if (label1.Content is int a)
+        {
+            var b = -a;
+            label1.Content = b;
+        }
+        else if (int.TryParse(label1.Content.ToString(), out int intValue))
+        {
+            var b = -intValue;
+            label1.Content = b;
+        }
+    }
+
+    private void Button_Click_3(object sender, RoutedEventArgs e)
+    {
+        var a = int.TryParse((string)label1.Content, out int intv);
+        label1.Content = (Math.Sqrt(intv).ToString()); 
+    }
+
+    private void Button_Click_4(object sender, RoutedEventArgs e)
+    {
+        var a = int.TryParse((string)label1.Content, out int intv);
+        label1.Content = ((intv*intv).ToString());
+    }
+
+    private void Button_Click_5(object sender, RoutedEventArgs e)
+    {
+        var a = float.TryParse((string)label1.Content, out float intv);
+        label1.Content = ((1 / intv).ToString());
+    }
+
+    private void Button_Click_6(object sender, RoutedEventArgs e)
+    {
+       
+    }
 }
